@@ -199,7 +199,7 @@ export default function Contact() {
                   onChange={handleInputChange}
                   pattern="^\+998[0-9]{9}$"
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors"
-                  placeholder="+998 90 123 45 67"
+                  placeholder="+998901234567"
                 />
               </div>
 
