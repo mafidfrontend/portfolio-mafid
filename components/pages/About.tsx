@@ -11,13 +11,13 @@ export default function About() {
     {
       institution: t("about.najot"),
       description: t("about.najotDesc"),
-      year: "2023",
+      year: "August 2024 - May 2025",
       icon: <GraduationCap className="w-6 h-6" />,
     },
     {
       institution: t("about.university"),
       description: t("about.universityDesc"),
-      year: "2020-2024",
+      year: "February to May | 2022",
       icon: <GraduationCap className="w-6 h-6" />,
     },
   ]

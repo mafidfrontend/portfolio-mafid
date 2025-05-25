@@ -1,17 +1,19 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { createContext, useContext, useState, type ReactNode } from "react"
+import type React from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
-export type Language = "uz" | "ru" | "en"
+export type Language = "uz" | "ru" | "en";
 
 interface LanguageContextType {
-  language: Language
-  setLanguage: (lang: Language) => void
-  t: (key: string) => string
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 const translations = {
   uz: {
@@ -25,7 +27,8 @@ const translations = {
     // Home
     "home.title": "Frontend Dasturchi",
     "home.subtitle": "React va TypeScript mutaxassisi",
-    "home.description": "Zamonaviy web ilovalar yaratishga ixtisoslashgan frontend dasturchi",
+    "home.description":
+      "Zamonaviy web ilovalar yaratishga ixtisoslashgan frontend dasturchi",
     "home.downloadResume": "Rezyumeni yuklash",
     "home.contactMe": "Men bilan bog'lanish",
 
@@ -41,15 +44,16 @@ const translations = {
 
     // Experience
     "experience.title": "Tajriba",
-    "experience.najotTitle": "Frontend Dasturchi - Najot Ta'lim",
+    "experience.najotTitle": "Yordamchi o'qituvchi - Najot Ta'lim",
     "experience.najotDesc":
-      "Zamonaviy web ilovalar yaratish, React va TypeScript bilan ishlash, jamoaviy loyihalarda ishtirok etish",
+      "Frontend dasturlash asoslarini o‘rganuvchilarga amaliy yordam berish, ularning savollariga javob berish va loyihalarni ishlab chiqishda yo‘l-yo‘riq ko‘rsatish.",
     "experience.technologies": "Texnologiyalar",
 
     // Portfolio
     "portfolio.title": "Portfolio",
     "portfolio.project1": "E-commerce Platform",
-    "portfolio.project1Desc": "NextJs va TypeScript yordamida yaratilgan zamonaviy onlayn do'kon",
+    "portfolio.project1Desc":
+      "NextJs va TypeScript yordamida yaratilgan zamonaviy onlayn do'kon",
 
     // Contact
     "contact.title": "Aloqa",
@@ -73,7 +77,8 @@ const translations = {
     // Home
     "home.title": "Frontend Разработчик",
     "home.subtitle": "Специалист по React и TypeScript",
-    "home.description": "Frontend разработчик, специализирующийся на создании современных веб-приложений",
+    "home.description":
+      "Frontend разработчик, специализирующийся на создании современных веб-приложений",
     "home.downloadResume": "Скачать резюме",
     "home.contactMe": "Связаться со мной",
 
@@ -89,15 +94,16 @@ const translations = {
 
     // Experience
     "experience.title": "Опыт",
-    "experience.najotTitle": "Frontend Разработчик - Najot Ta'lim",
+    "experience.najotTitle": "Ассистент преподавателя — Najot Ta'lim",
     "experience.najotDesc":
-      "Создание современных веб-приложений, работа с React и TypeScript, участие в командных проектах",
+      "Помощь студентам в изучении основ frontend-разработки, ответы на их вопросы и сопровождение в процессе создания проектов.",
     "experience.technologies": "Технологии",
 
     // Portfolio
     "portfolio.title": "Портфолио",
     "portfolio.project1": "E-commerce Платформа",
-    "portfolio.project1Desc": "Современный интернет-магазин, созданный с помощью NextJs и TypeScript",
+    "portfolio.project1Desc":
+      "Современный интернет-магазин, созданный с помощью NextJs и TypeScript",
 
     // Contact
     "contact.title": "Контакты",
@@ -121,7 +127,8 @@ const translations = {
     // Home
     "home.title": "Frontend Developer",
     "home.subtitle": "React & TypeScript Specialist",
-    "home.description": "Frontend developer specializing in creating modern web applications",
+    "home.description":
+      "Frontend developer specializing in creating modern web applications",
     "home.downloadResume": "Download Resume",
     "home.contactMe": "Contact Me",
 
@@ -137,15 +144,16 @@ const translations = {
 
     // Experience
     "experience.title": "Experience",
-    "experience.najotTitle": "Frontend Developer - Najot Ta'lim",
+    "experience.najotTitle": "Teaching Assistant - Najot Ta'lim",
     "experience.najotDesc":
-      "Creating modern web applications, working with React and TypeScript, participating in team projects",
+      "Assisting students in learning frontend development fundamentals, answering their questions, and guiding them through project development.",
     "experience.technologies": "Technologies",
 
     // Portfolio
     "portfolio.title": "Portfolio",
     "portfolio.project1": "E-commerce Platform",
-    "portfolio.project1Desc": "Modern online store built with NextJs and TypeScript",
+    "portfolio.project1Desc":
+      "Modern online store built with NextJs and TypeScript",
 
     // Contact
     "contact.title": "Contact",
@@ -158,22 +166,32 @@ const translations = {
     "contact.success": "Message sent successfully!",
     "contact.error": "An error occurred. Please try again.",
   },
-}
+};
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>("en")
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
+  const [language, setLanguage] = useState<Language>("en");
 
   const t = (key: string): string => {
-    return translations[language][key as keyof (typeof translations)[typeof language]] || key
-  }
+    return (
+      translations[language][
+        key as keyof (typeof translations)[typeof language]
+      ] || key
+    );
+  };
 
-  return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
-}
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
 
 export const useLanguage = () => {
-  const context = useContext(LanguageContext)
+  const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider")
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
-  return context
-}
+  return context;
+};

@@ -82,7 +82,7 @@ export default function Experience() {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="text-purple-400 mb-4 font-medium"
               >
-                2023 - Present
+                2025 - Present
               </motion.p>
 
               <motion.p
@@ -103,7 +103,7 @@ export default function Experience() {
               >
                 <motion.div variants={itemVariants} className="flex items-center gap-3 text-gray-300">
                   <Code className="text-purple-400" size={20} />
-                  <span>Clean Code</span>
+                  <span>Teaching</span>
                 </motion.div>
                 <motion.div variants={itemVariants} className="flex items-center gap-3 text-gray-300">
                   <Users className="text-purple-400" size={20} />
