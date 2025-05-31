@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ExternalLink, Github, Code } from "lucide-react"
-import { useLanguage } from "@/contexts/LanguageContext"
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Code } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Portfolio() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   const projects = [
     {
@@ -17,7 +17,16 @@ export default function Portfolio() {
       liveUrl: "https://mafid-shop.vercel.app/",
       codeUrl: "https://github.com/mafidfrontend/mafidShop",
     },
-  ]
+    {
+      id: 2,
+      title: t("portfolio.project2"),
+      description: t("portfolio.project2Desc"),
+      image: "/dashboardApp.png",
+      technologies: ["React", "TypeScript", "Zustand"],
+      liveUrl: "https://trend-solution.vercel.app/",
+      codeUrl: "https://github.com/mafidfrontend/trend-Solution",
+    },
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,7 +36,7 @@ export default function Portfolio() {
         staggerChildren: 0.2,
       },
     },
-  }
+  };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -39,7 +48,7 @@ export default function Portfolio() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   return (
     <div className="min-h-screen py-20 px-4">
@@ -50,7 +59,9 @@ export default function Portfolio() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("portfolio.title")}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {t("portfolio.title")}
+          </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
         </motion.div>
 
@@ -98,11 +109,13 @@ export default function Portfolio() {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col justify-between h-[58%]">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-gray-400 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -142,5 +155,5 @@ export default function Portfolio() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }

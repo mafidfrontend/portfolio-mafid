@@ -54,6 +54,8 @@ const translations = {
     "portfolio.project1": "E-commerce Platform",
     "portfolio.project1Desc":
       "NextJs va TypeScript yordamida yaratilgan zamonaviy onlayn do'kon",
+    "portfolio.project2": "Portfolio App",
+    "portfolio.project2Desc": "Trend Solution freelance kompaniyasi uchun portfolio web sahiasi",
 
     // Contact
     "contact.title": "Aloqa",
@@ -104,6 +106,8 @@ const translations = {
     "portfolio.project1": "E-commerce Платформа",
     "portfolio.project1Desc":
       "Современный интернет-магазин, созданный с помощью NextJs и TypeScript",
+    "portfolio.project2": "Portfolio App",
+    "portfolio.project2Desc": "Trend Solution freelance kompaniyasi uchun portfolio web sahiasi",
 
     // Contact
     "contact.title": "Контакты",
@@ -154,6 +158,8 @@ const translations = {
     "portfolio.project1": "E-commerce Platform",
     "portfolio.project1Desc":
       "Modern online store built with NextJs and TypeScript",
+    "portfolio.project2": "Portfolio App",
+    "portfolio.project2Desc": "Trend Solution freelance kompaniyasi uchun portfolio web sahiasi",
 
     // Contact
     "contact.title": "Contact",
