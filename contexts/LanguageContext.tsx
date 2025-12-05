@@ -22,6 +22,7 @@ const translations = {
     "nav.about": "Men haqimda",
     "nav.experience": "Tajriba",
     "nav.portfolio": "Portfolio",
+    "nav.skills": "Ko'nikmalar",
     "nav.contact": "Aloqa",
 
     // Home
@@ -44,9 +45,23 @@ const translations = {
 
     // Experience
     "experience.title": "Tajriba",
-    "experience.najotTitle": "Yordamchi o'qituvchi - Najot Ta'lim",
-    "experience.najotDesc":
-      "Frontend dasturlash asoslarini o‘rganuvchilarga amaliy yordam berish, ularning savollariga javob berish va loyihalarni ishlab chiqishda yo‘l-yo‘riq ko‘rsatish.",
+    "experience.employmentType.freelance": "Freelance",
+    "experience.employmentType.fulltime": "To'liq ish kuni",
+    "experience.workType.hybrid": "Hybrid",
+    "experience.workType.remote": "Masofaviy",
+    "experience.workType.onsite": "Ofisda",
+    "experience.talimHub.title": "Frontend Developer",
+    "experience.talimHub.description": "Men bu ajoyib jamoa bilan frontend developer sifatida ishlashni boshladim va ular bilan boshqa yirik loyihalarda hamkorlik qilishni istayman. Mening asosiy vazifam backend bilan bog'lanish va foydalanuvchilar uchun ijodkorlik qo'shish.",
+    "experience.chegbox.title": "Software Engineer",
+    "experience.chegbox.description": "Chegirma asosidagi mahsulotlar va xizmatlar e'lon qilinadigan platforma - Checkbox.uz loyihasini noldan ishlab chiqyapman. Loyihada Software Engineer sifatida frontend va backend qismlarini mustaqil tarzda ishlab chiqyapman.",
+    "experience.izisol.title": "Frontend Developer",
+    "experience.izisol.description": "Izisol kompaniyasida Junior Frontend Developer sifatida xizmat ko'rsatish veb-saytida ishladim. Saytdagi turli front-end buglarni tuzatdim va mobil moslashuvni yaxshiladim. Saytning SEO optimizatsiyasi ustida ishladim.",
+    "experience.najot.title": "Yordamchi o'qituvchi",
+    "experience.najot.description": "Frontend yo'nalishidagi Foundation va Standart kurslarida yordamchi o'qituvchi sifatida ishladim. O'quvchilarga dars vaqtida va undan tashqarida kod yozish, tushunmagan mavzularni takrorlashda yordam berdim.",
+    "experience.sdct.title": "Frontend Developer",
+    "experience.sdct.description": "Student Chat loyihasida Frontend dasturchi sifatida faol ishtirok etdim. ReactJS + TypeScript asosidagi foydalanuvchi interfeyslarini ishlab chiqdim. Komandada ishlash, Git orqali kodni boshqarish, hamkorlikda ishlash ko'nikmalarini rivojlantirdim.",
+    "experience.skills.frontend": "Front-End Development",
+    "experience.skills.andMore": "va +9 ko'nikma",
     "experience.technologies": "Texnologiyalar",
 
     // Portfolio
@@ -67,6 +82,17 @@ const translations = {
     "contact.send": "Xabar yuborish",
     "contact.success": "Xabar muvaffaqiyatli yuborildi!",
     "contact.error": "Xatolik yuz berdi. Qaytadan urinib ko'ring.",
+
+    // Skills
+    "skills.title": "Ko'nikmalar",
+    "skills.subtitle": "Men ishlatadigan texnologiyalar va vositalar",
+    "skills.frontend.title": "Frontend",
+    "skills.backend.title": "Backend",
+    "skills.design.title": "Dizayn",
+    "skills.tools.title": "Vositalar",
+    "skills.web.title": "Web",
+    "skills.mobile.title": "Mobil",
+    "skills.additional.title": "Qo'shimcha ko'nikmalar",
   },
   ru: {
     // Navigation
@@ -74,6 +100,7 @@ const translations = {
     "nav.about": "Обо мне",
     "nav.experience": "Опыт",
     "nav.portfolio": "Портфолио",
+    "nav.skills": "Навыки",
     "nav.contact": "Контакты",
 
     // Home
@@ -96,9 +123,23 @@ const translations = {
 
     // Experience
     "experience.title": "Опыт",
-    "experience.najotTitle": "Ассистент преподавателя — Najot Ta'lim",
-    "experience.najotDesc":
-      "Помощь студентам в изучении основ frontend-разработки, ответы на их вопросы и сопровождение в процессе создания проектов.",
+    "experience.employmentType.freelance": "Фриланс",
+    "experience.employmentType.fulltime": "Полный рабочий день",
+    "experience.workType.hybrid": "Гибридный",
+    "experience.workType.remote": "Удаленно",
+    "experience.workType.onsite": "В офисе",
+    "experience.talimHub.title": "Frontend Developer",
+    "experience.talimHub.description": "Я присоединился к этой замечательной команде в качестве frontend разработчика и с нетерпением жду работы с ними над другими крупными проектами. Моя основная задача - подключение к backend и добавление креативности для пользователей.",
+    "experience.chegbox.title": "Software Engineer",
+    "experience.chegbox.description": "Разрабатываю с нуля платформу для объявлений о продуктах и услугах на основе скидок - проект Checkbox.uz. В качестве Software Engineer самостоятельно разрабатываю frontend и backend части проекта.",
+    "experience.izisol.title": "Frontend Developer",
+    "experience.izisol.description": "Работал в качестве Junior Frontend Developer на сайте обслуживания компании Izisol. Исправлял различные front-end ошибки на сайте и улучшал мобильную адаптивность. Работал над SEO оптимизацией сайта.",
+    "experience.najot.title": "Ассистент преподавателя",
+    "experience.najot.description": "Работал в качестве ассистента преподавателя на курсах Foundation и Standard по направлению Frontend. Помогал студентам в написании кода во время и вне занятий, а также в повторении непонятых тем.",
+    "experience.sdct.title": "Frontend Developer",
+    "experience.sdct.description": "Активно участвовал в проекте Student Chat в качестве Frontend разработчика. Разрабатывал пользовательские интерфейсы на основе ReactJS + TypeScript. Развивал навыки работы в команде, управления кодом через Git, сотрудничества.",
+    "experience.skills.frontend": "Front-End Development",
+    "experience.skills.andMore": "и +9 навыков",
     "experience.technologies": "Технологии",
 
     // Portfolio
@@ -119,6 +160,17 @@ const translations = {
     "contact.send": "Отправить сообщение",
     "contact.success": "Сообщение успешно отправлено!",
     "contact.error": "Произошла ошибка. Попробуйте еще раз.",
+
+    // Skills
+    "skills.title": "Навыки",
+    "skills.subtitle": "Технологии и инструменты, которые я использую",
+    "skills.frontend.title": "Frontend",
+    "skills.backend.title": "Backend",
+    "skills.design.title": "Дизайн",
+    "skills.tools.title": "Инструменты",
+    "skills.web.title": "Web",
+    "skills.mobile.title": "Мобильный",
+    "skills.additional.title": "Дополнительные навыки",
   },
   en: {
     // Navigation
@@ -126,6 +178,7 @@ const translations = {
     "nav.about": "About",
     "nav.experience": "Experience",
     "nav.portfolio": "Portfolio",
+    "nav.skills": "Skills",
     "nav.contact": "Contact",
 
     // Home
@@ -148,9 +201,23 @@ const translations = {
 
     // Experience
     "experience.title": "Experience",
-    "experience.najotTitle": "Teaching Assistant - Najot Ta'lim",
-    "experience.najotDesc":
-      "Assisting students in learning frontend development fundamentals, answering their questions, and guiding them through project development.",
+    "experience.employmentType.freelance": "Freelance",
+    "experience.employmentType.fulltime": "Full-time",
+    "experience.workType.hybrid": "Hybrid",
+    "experience.workType.remote": "Remote",
+    "experience.workType.onsite": "On-site",
+    "experience.talimHub.title": "Frontend Developer",
+    "experience.talimHub.description": "I joined this great team as a frontend developer and I am looking forward to working with them on other big projects. My main task is to connect with the backend and add some creativity to the users.",
+    "experience.chegbox.title": "Software Engineer",
+    "experience.chegbox.description": "I am developing from scratch a platform for announcing products and services based on discounts - the Checkbox.uz project. As a Software Engineer, I am independently developing the frontend and backend parts of the project.",
+    "experience.izisol.title": "Frontend Developer",
+    "experience.izisol.description": "Worked as a Junior Frontend Developer on a service website at Izisol company. Fixed various front-end bugs on the site and improved mobile responsiveness. Worked on the site's SEO optimization.",
+    "experience.najot.title": "Teacher Assistant",
+    "experience.najot.description": "Worked as an assistant teacher in Foundation and Standard courses in the Frontend direction. Helped students with coding during and outside of class, and with reviewing topics they didn't understand.",
+    "experience.sdct.title": "Frontend Developer",
+    "experience.sdct.description": "Actively participated as a Frontend developer in the Student Chat project. Developed user interfaces based on ReactJS + TypeScript. Developed skills in teamwork, code management via Git, and collaboration.",
+    "experience.skills.frontend": "Front-End Development",
+    "experience.skills.andMore": "and +9 skills",
     "experience.technologies": "Technologies",
 
     // Portfolio
@@ -171,6 +238,17 @@ const translations = {
     "contact.send": "Send Message",
     "contact.success": "Message sent successfully!",
     "contact.error": "An error occurred. Please try again.",
+
+    // Skills
+    "skills.title": "Skills",
+    "skills.subtitle": "Technologies and tools I use",
+    "skills.frontend.title": "Frontend",
+    "skills.backend.title": "Backend",
+    "skills.design.title": "Design",
+    "skills.tools.title": "Tools",
+    "skills.web.title": "Web",
+    "skills.mobile.title": "Mobile",
+    "skills.additional.title": "Additional Skills",
   },
 };
 

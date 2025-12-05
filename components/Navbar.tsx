@@ -19,6 +19,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
     { key: "about", label: t("nav.about") },
     { key: "experience", label: t("nav.experience") },
     { key: "portfolio", label: t("nav.portfolio") },
+    { key: "skills", label: t("nav.skills") },
     { key: "contact", label: t("nav.contact") },
   ]
 

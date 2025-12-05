@@ -83,6 +83,7 @@ export default function Home() {
             href="https://github.com/mafidfrontend"
             whileHover={{ scale: 1.2, rotate: 5 }}
             className="text-gray-400 hover:text-purple-400 transition-colors"
+            aria-label="GitHub"
           >
             <Github size={24} />
           </motion.a>
@@ -90,6 +91,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/abdulloh-anvarov-3ba480248/"
             whileHover={{ scale: 1.2, rotate: -5 }}
             className="text-gray-400 hover:text-purple-400 transition-colors"
+            aria-label="LinkedIn"
           >
             <Linkedin size={24} />
           </motion.a>

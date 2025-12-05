@@ -9,9 +9,10 @@ import Home from "@/components/pages/Home"
 import About from "@/components/pages/About"
 import Experience from "@/components/pages/Experience"
 import Portfolio from "@/components/pages/Portfolio"
+import Skills from "@/components/pages/Skills"
 import Contact from "@/components/pages/Contact"
 
-export type PageType = "home" | "about" | "experience" | "portfolio" | "contact"
+export type PageType = "home" | "about" | "experience" | "portfolio" | "skills" | "contact"
 
 export default function HomePage() {
   const [currentPage, setCurrentPage] = useState<PageType>("home")
@@ -26,6 +27,8 @@ export default function HomePage() {
         return <Experience />
       case "portfolio":
         return <Portfolio />
+      case "skills":
+        return <Skills />
       case "contact":
         return <Contact />
       default:
