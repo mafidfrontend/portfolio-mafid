@@ -32,9 +32,15 @@ export default function Contact() {
     setSubmitStatus("idle")
 
     try {
-      // Replace with your actual bot token and chat ID
-      const BOT_TOKEN = "7206688307:AAEMvJJ8bLhvs6PgaI9GJeJxjufEyA96LYk"
-      const CHAT_ID = "1887577109"
+      // Get bot token and chat ID from environment variables
+      const BOT_TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN
+      const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID
+
+      if (!BOT_TOKEN || !CHAT_ID) {
+        console.error("Telegram bot token or chat ID is missing")
+        setSubmitStatus("error")
+        return
+      }
 
       const message = `
 🔔 New Contact
