@@ -7,7 +7,6 @@ import { motion } from "framer-motion"
 import { Send, Mail, Phone, MapPin, CheckCircle, AlertCircle } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
 
-
 export default function Contact() {
   const { t } = useLanguage()
   const [formData, setFormData] = useState({
