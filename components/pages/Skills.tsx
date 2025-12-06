@@ -31,18 +31,6 @@ export default function Skills() {
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: t("skills.backend.title"),
-      icon: <Database size={24} />,
-      skills: ["Node.js", "Express", "REST API", "GraphQL"],
-      color: "from-green-500 to-emerald-500",
-    },
-    {
-      title: t("skills.design.title"),
-      icon: <Palette size={24} />,
-      skills: ["UI/UX Design", "Figma", "Responsive Design", "Material Design"],
-      color: "from-pink-500 to-rose-500",
-    },
-    {
       title: t("skills.tools.title"),
       icon: <Zap size={24} />,
       skills: ["Git", "GitHub", "Webpack", "Vite", "Zustand", "React Hook Form"],
@@ -53,12 +41,6 @@ export default function Skills() {
       icon: <Globe size={24} />,
       skills: ["SEO", "Performance Optimization", "Accessibility", "PWA"],
       color: "from-purple-500 to-indigo-500",
-    },
-    {
-      title: t("skills.mobile.title"),
-      icon: <Smartphone size={24} />,
-      skills: ["React Native", "Mobile Responsive", "Touch Optimization"],
-      color: "from-teal-500 to-cyan-500",
     },
   ]
 
@@ -116,7 +98,7 @@ export default function Skills() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.1 * index + 0.05 * skillIndex }}
                     whileHover={{ scale: 1.1 }}
-                    className="px-3 py-1.5 bg-slate-700/50 text-gray-300 rounded-lg text-sm hover:bg-purple-500/20 hover:text-purple-300 transition-colors cursor-default"
+                    className="px-3 py-1.5 cursor-pointer bg-slate-700/50 text-gray-300 rounded-lg text-sm hover:bg-purple-500/20 hover:text-purple-300 transition-colors cursor-default"
                   >
                     {skill}
                   </motion.span>
@@ -139,10 +121,8 @@ export default function Skills() {
               "Problem Solving",
               "Team Collaboration",
               "Code Review",
-              "Agile Methodology",
               "Version Control",
               "Testing",
-              "Documentation",
             ].map((skill, index) => (
               <motion.span
                 key={index}

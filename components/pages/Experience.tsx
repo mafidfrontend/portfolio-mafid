@@ -27,7 +27,7 @@ export default function Experience() {
       employmentType: t("experience.employmentType.freelance"),
       startDate: "July 2025",
       endDate: "November 2025",
-      duration: "5 months",
+      duration: "3 months",
       location: "Tashkent, Tashkent, Uzbekistan",
       workType: t("experience.workType.hybrid"),
       description: t("experience.talimHub.description"),
@@ -68,18 +68,6 @@ export default function Experience() {
       workType: t("experience.workType.onsite"),
       description: t("experience.najot.description"),
       skills: ["GitHub"],
-    },
-    {
-      title: t("experience.sdct.title"),
-      company: "SDCT Team",
-      employmentType: t("experience.employmentType.freelance"),
-      startDate: "April 2025",
-      endDate: "May 2025",
-      duration: "2 months",
-      location: "Tashkent, Tashkent, Uzbekistan",
-      workType: t("experience.workType.remote"),
-      description: t("experience.sdct.description"),
-      skills: ["ReactJS", "TypeScript", "Git"],
     },
   ]
 
