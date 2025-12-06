@@ -1,16 +1,25 @@
 // app/page.tsx
 "use client"
 
-import { useState } from "react"
+import { useState, lazy, Suspense } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { LanguageProvider } from "@/contexts/LanguageContext"
 import Navbar from "@/components/Navbar"
 import Home from "@/components/pages/Home"
-import About from "@/components/pages/About"
-import Experience from "@/components/pages/Experience"
-import Portfolio from "@/components/pages/Portfolio"
-import Skills from "@/components/pages/Skills"
-import Contact from "@/components/pages/Contact"
+
+// Code splitting - Lazy load pages
+const About = lazy(() => import("@/components/pages/About"))
+const Experience = lazy(() => import("@/components/pages/Experience"))
+const Portfolio = lazy(() => import("@/components/pages/Portfolio"))
+const Skills = lazy(() => import("@/components/pages/Skills"))
+const Contact = lazy(() => import("@/components/pages/Contact"))
+
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
+  </div>
+)
 
 export type PageType = "home" | "about" | "experience" | "portfolio" | "skills" | "contact"
 
@@ -22,15 +31,35 @@ export default function HomePage() {
       case "home":
         return <Home />
       case "about":
-        return <About />
+        return (
+          <Suspense fallback={<PageLoader />}>
+            <About />
+          </Suspense>
+        )
       case "experience":
-        return <Experience />
+        return (
+          <Suspense fallback={<PageLoader />}>
+            <Experience />
+          </Suspense>
+        )
       case "portfolio":
-        return <Portfolio />
+        return (
+          <Suspense fallback={<PageLoader />}>
+            <Portfolio />
+          </Suspense>
+        )
       case "skills":
-        return <Skills />
+        return (
+          <Suspense fallback={<PageLoader />}>
+            <Skills />
+          </Suspense>
+        )
       case "contact":
-        return <Contact />
+        return (
+          <Suspense fallback={<PageLoader />}>
+            <Contact />
+          </Suspense>
+        )
       default:
         return <Home />
     }
