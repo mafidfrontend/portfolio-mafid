@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -16,11 +17,14 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-purple-500 shadow-2xl">
-            <img
+          <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-purple-500 shadow-2xl relative">
+            <Image
               src="/logo.jpg"
               alt="Profile"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 192px, 192px"
             />
           </div>
         </motion.div>
@@ -80,6 +84,7 @@ export default function Home() {
           className="flex items-center justify-center gap-6"
         >
           <motion.a
+          rel="preconnect"
             href="https://github.com/mafidfrontend"
             whileHover={{ scale: 1.2, rotate: 5 }}
             className="text-gray-400 hover:text-purple-400 transition-colors"
@@ -88,6 +93,7 @@ export default function Home() {
             <Github size={24} />
           </motion.a>
           <motion.a
+          rel="preconnect"
             href="https://www.linkedin.com/in/abdulloh-anvarov-3ba480248/"
             whileHover={{ scale: 1.2, rotate: -5 }}
             className="text-gray-400 hover:text-purple-400 transition-colors"

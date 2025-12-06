@@ -15,6 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to Telegram API for faster connection */}
+        <link rel="preconnect" href="https://api.telegram.org" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://api.telegram.org" />
+      </head>
       <body>{children}</body>
     </html>
   )

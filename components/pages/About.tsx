@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { GraduationCap, Calendar } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
 
@@ -41,8 +42,14 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
-              <img src="/logo.jpg" alt="About me" className="w-full h-full object-cover" />
+            <div className="w-full h-96 rounded-2xl overflow-hidden shadow-2xl relative">
+              <Image
+                src="/logo.jpg"
+                alt="About me"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </motion.div>
 
